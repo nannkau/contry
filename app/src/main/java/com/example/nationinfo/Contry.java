@@ -4,11 +4,12 @@ public class Contry {
     private String name;
     private String population;
     private  String area;
-
-    public Contry(String name, String population, String area) {
+    private String linkFlag;
+    public Contry(String name, String population, String area,String linkFlag) {
         this.name = name;
         this.population = population;
         this.area = area;
+        this.linkFlag=linkFlag;
     }
 
     public String getName() {
@@ -29,6 +30,14 @@ public class Contry {
 
     public String getArea() {
         return area;
+    }
+
+    public String getLinkFlag() {
+        return linkFlag;
+    }
+
+    public void setLinkFlag(String linkFlag) {
+        this.linkFlag = linkFlag;
     }
 
     public void setArea(String area) {
