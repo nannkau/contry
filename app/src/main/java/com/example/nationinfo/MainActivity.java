@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                     if(a.getName().equals(name)){
                         textView.setText("Name: "+a.getName());
                         textView2.setText("Population: "+a.getPopulation()+"(people)");
-                        textView3.setText("Area:" +a.getArea()+"(km)");
+                        textView3.setText("Area:" +a.getArea()+"(kilometer)");
                         Glide.with(MainActivity.this)
                                 .load(a.getLinkFlag())
                                 .into(imageView);
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                         String name = c.getString("countryName");
                         String population = c.getString("population");
                         String area = c.getString("areaInSqKm");
-                        String linkFlag="http://api.geonames.org/flags/x/"+c.getString("fipsCode").toLowerCase()+".gif";
+                        String linkFlag="http://api.geonames.org/flags/x/"+c.getString("countryCode").toLowerCase()+".gif";
                       Contry country= new Contry(name,population,area,linkFlag);
 
                         // adding each child node to HashMap key => value
